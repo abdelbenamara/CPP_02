@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:37:52 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/16 16:34:48 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/18 14:56:07 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Fixed::~Fixed(void)
 Fixed &Fixed::operator=(Fixed const &rhs)
 {
 	if (this != &rhs)
-		this->setRawBits(rhs.getRawBits());
+		this->rawBits = rhs.getRawBits();
 
 	return *this;
 }
