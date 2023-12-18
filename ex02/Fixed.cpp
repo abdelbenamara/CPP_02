@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:37:52 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 14:56:07 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/18 16:21:17 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,14 @@ Fixed::~Fixed(void)
 Fixed &Fixed::operator=(Fixed const &rhs)
 {
 	if (this != &rhs)
-		this->rawBits = rhs.getRawBits();
+		this->rawBits = rhs.rawBits;
 
 	return *this;
 }
 
 bool Fixed::operator>(Fixed const &rhs) const
 {
-	return this->rawBits > rhs.getRawBits();
+	return this->rawBits > rhs.rawBits;
 }
 
 bool Fixed::operator<(Fixed const &rhs) const
@@ -72,7 +72,7 @@ bool Fixed::operator<=(Fixed const &rhs) const
 
 bool Fixed::operator==(Fixed const &rhs) const
 {
-	return this->rawBits == rhs.getRawBits();
+	return this->rawBits == rhs.rawBits;
 }
 
 bool Fixed::operator!=(Fixed const &rhs) const
@@ -84,7 +84,7 @@ Fixed Fixed::operator+(Fixed const &rhs) const
 {
 	Fixed res;
 
-	res.setRawBits(this->rawBits + rhs.getRawBits());
+	res.rawBits = this->rawBits + rhs.rawBits;
 
 	return res;
 }
@@ -93,7 +93,7 @@ Fixed Fixed::operator-(Fixed const &rhs) const
 {
 	Fixed res;
 
-	res.setRawBits(this->rawBits - rhs.getRawBits());
+	res.rawBits = this->rawBits - rhs.rawBits;
 
 	return res;
 }
@@ -162,6 +162,8 @@ Fixed const &Fixed::max(Fixed const &lhs, Fixed const &rhs)
 
 int Fixed::getRawBits(void) const
 {
+	std::cout << "getRawBits member function called" << std::endl;
+
 	return this->rawBits;
 }
 
