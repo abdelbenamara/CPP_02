@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:37:52 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 14:50:25 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/18 16:20:58 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,11 @@ int Fixed::getRawBits(void) const
 	std::cout << "getRawBits member function called" << std::endl;
 
 	return this->rawBits;
+}
+
+void Fixed::setRawBits(int const raw)
+{
+	this->rawBits = raw;
+
+	return;
 }
