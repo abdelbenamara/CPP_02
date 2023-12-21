@@ -6,10 +6,11 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 12:41:33 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/16 11:41:25 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/21 17:24:49 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "Fixed.hpp"
 
 int main(void)
