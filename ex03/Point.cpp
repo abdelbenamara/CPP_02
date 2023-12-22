@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 17:43:18 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/22 10:52:24 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/22 15:38:15 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,11 @@ Fixed const &Point::getX(void) const
 Fixed const &Point::getY(void) const
 {
 	return this->y;
+}
+
+std::ostream &operator<<(std::ostream &o, Point const &i)
+{
+	o << "(x = " << i.getX() << ", y = " << i.getY() << ")";
+
+	return o;
 }
