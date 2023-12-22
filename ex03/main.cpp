@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 20:08:41 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/21 22:01:31 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/22 15:39:58 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void test(Point const &A,
 				 Point const &P,
 				 char const *name)
 {
-	std::cout << name << "(" << P.getX() << ", " << P.getY() << "): \033[0;3";
+	std::cout << name << P << ": \033[0;3";
 	std::cout << (bsp(A, B, C, P) ? "2min" : "1mout");
 	std::cout << "side\033[0m" << std::endl;
 }
@@ -44,9 +44,9 @@ int main(void)
 	Point const P12(0.92f, -2.42f);
 
 	std::cout << "The vertices of our beloved triangle are:" << std::endl;
-	std::cout << "A(" << A.getX() << ", " << A.getY() << ")" << std::endl;
-	std::cout << "B(" << B.getX() << ", " << B.getY() << ")" << std::endl;
-	std::cout << "C(" << C.getX() << ", " << C.getY() << ")" << std::endl;
+	std::cout << "A" << A << std::endl;
+	std::cout << "B" << B << std::endl;
+	std::cout << "C" << C << std::endl;
 	std::cout << std::endl;
 	std::cout << "Are theses points inside the ABC triangle ? ";
 	std::cout << "(no vertex or on edge)" << std::endl;
