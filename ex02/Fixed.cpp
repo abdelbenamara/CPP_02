@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:37:52 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 16:21:17 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/22 10:15:09 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,8 @@ Fixed::Fixed(float const point)
 	return;
 }
 
-Fixed::Fixed(Fixed const &src)
+Fixed::Fixed(Fixed const &src) : rawBits(src.rawBits)
 {
-	*this = src;
-
 	return;
 }
 
@@ -162,8 +160,6 @@ Fixed const &Fixed::max(Fixed const &lhs, Fixed const &rhs)
 
 int Fixed::getRawBits(void) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
-
 	return this->rawBits;
 }
 
