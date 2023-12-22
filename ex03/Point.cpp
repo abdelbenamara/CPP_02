@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 17:43:18 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/21 22:54:25 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/22 10:52:24 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,10 @@ Point::~Point(void)
 Point &Point::operator=(Point const &rhs)
 {
 	if (this != &rhs)
-		std::cerr << "Error: Point attributes are immutable" << std::endl;
+	{
+		const_cast<Fixed &>(this->x) = rhs.x;
+		const_cast<Fixed &>(this->y) = rhs.y;
+	}
 
 	return *this;
 }
