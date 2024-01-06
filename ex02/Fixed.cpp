@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:37:52 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/22 10:15:09 by abenamar         ###   ########.fr       */
+/*   Updated: 2024/01/06 16:17:03 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,7 +140,7 @@ Fixed Fixed::operator--(int)
 
 Fixed const &Fixed::min(Fixed &lhs, Fixed &rhs)
 {
-	return Fixed::min(lhs, rhs);
+	return Fixed::min(const_cast<Fixed const &>(lhs), rhs);
 }
 
 Fixed const &Fixed::min(Fixed const &lhs, Fixed const &rhs)
@@ -150,7 +150,7 @@ Fixed const &Fixed::min(Fixed const &lhs, Fixed const &rhs)
 
 Fixed const &Fixed::max(Fixed &lhs, Fixed &rhs)
 {
-	return Fixed::max(lhs, rhs);
+	return Fixed::max(const_cast<Fixed const &>(lhs), rhs);
 }
 
 Fixed const &Fixed::max(Fixed const &lhs, Fixed const &rhs)
